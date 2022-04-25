@@ -1,9 +1,13 @@
-{% extends "base.html" %}{% block title %}Sign Up{% endblock %}
+{% extends "base.html" %}{% block title %}Sign Up{% endblock %} <!-- Changes the title of the website when this page is open. -->
 
-{% block content %}
+{% block content %} <!-- What even is in this tag will be displayed in content div in the base.html -->
 
+<!-- Some of the class used in this page is from the Bootstrap Library -->
+
+<!-- Sign Up Form -->
 <form method="POST" action="">
   <h3 align="center">Sign Up</h3>
+  <!-- Register email input -->
   <div class="form-group">
     <label for="email">Email Address</label>
     <input
@@ -14,6 +18,7 @@
       placeholder="Enter email"
     />
   </div>
+  <!-- Register name input -->
   <div class="form-group">
     <label for="firstName">First Name</label>
     <input
@@ -24,6 +29,7 @@
       placeholder="Enter first name"
     />
   </div>
+  <!-- Register password input -->
   <div class="form-group">
     <label for="password1">Password</label>
     <input
@@ -34,6 +40,7 @@
       placeholder="Enter password"
     />
   </div>
+  <!-- Register confirming password input -->
   <div class="form-group">
     <label for="password2">Password (Confirm)</label>
     <input

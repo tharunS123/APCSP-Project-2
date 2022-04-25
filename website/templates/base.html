@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- Bootstrap CSS: This libary is imported from stackpath.com(offical website) -->
   <link
     rel="stylesheet"
     href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -16,10 +17,14 @@
     crossorigin="anonymous"
   />
 
+  <!-- Title of the Website: This title will be changing for each page.  -->
   <title>{% block title %}Home{% endblock %}</title>
 </head>
 <body>
 
+  <!-- Some of the code writen in this page was already in the package that I imported. -->
+
+  <!-- Navigation Bar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <button class="navbar-toggler"type="button"data-toggle="collapse"data-target="#navbar">
       <span class="navbar-toggler-icon"></span>
@@ -37,6 +42,7 @@
     </div>
   </nav>
 
+  <!-- This block of code will display the messages that is given by the program. -->
   {% with messages = get_flashed_messages(with_categories=true) %} 
   {% if messages %} 
     {% for category, message in messages %} 
@@ -58,12 +64,14 @@
     {% endfor %} 
   {% endif %} 
   {% endwith %}
-
+  
+  <!-- This Div will display the content from the current html file that the program redirects. -->
   <div class="container">
     {% block content %}
     {% endblock %}
   </div>
   
+  <!-- Bootstrap JavaScript: This libary was imported from cdnjs.com,maxcdn.com,code.jquery.com(offical website) -->
   <script
     src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
     integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
